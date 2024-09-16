@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="video-call-interface">
+        <h2>Room ID: <span id="current-room"></span></h2>
+        <div id="video-container">
+            <video class="video-feed" id="my-video" autoplay></video>
+            <video class="video-feed" id="opponent-video1" autoplay></video>
+            
+        </div>
+
+        <div id="controls">
+            <button id="mic-toggle">Mic Off</button>
+            <button id="video-toggle">Video Off</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

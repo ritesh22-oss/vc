@@ -1,0 +1,160 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(134, 193, 238);
+}
+
+/* Join Interface Styling */
+#join-interface {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#join-interface h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#join-interface input, #join-interface button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#join-interface input {
+    width: 250px;
+    border: 2px solid #007bff;
+    background: #fff;
+}
+
+#join-interface input:focus {
+    border-color: #0056b3;
+}
+
+#join-interface button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#join-interface button:hover {
+    background-color: #0056b3;
+}
+
+#room-code {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Video Call Interface Styling */
+#video-call-interface {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#current-room {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 20px;
+    padding: 10px;
+    height: 100vh;
+    
+    box-sizing: border-box;
+    /* Optional: Set a fixed size for each video feed */
+}
+
+.video-feed {
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Fixed size for video feeds */
+    width: 200px;
+    height: 200px;
+    /* Optional: Ensure aspect ratio */
+    min-width: 200px;
+    min-height: 200px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .video-container {
+        grid-template-columns: repeat(2, 1fr); /* Ensure two columns */
+        grid-template-rows: repeat(2, 1fr); /* Ensure two rows */
+    }
+    .video-feed {
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+        min-height: 150px;
+    }
+}
+
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#controls button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#controls button:hover {
+    background-color: #218838;
+}
+
+#mic-toggle, #video-toggle {
+    background-color: #dc3545;
+}
+
+#mic-toggle:hover, #video-toggle:hover {
+    background-color: #c82333;
+}
